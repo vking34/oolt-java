@@ -1,24 +1,22 @@
 package week6;
+import java.lang.NullPointerException;
 
 public class week6 {
     public static void main(String[] agrs)
     {
         Account acc1 = new Account("Vuong", 3000000);
+        Account acc2 = new Account("Tu", 4000000);
 
-        System.out.println("Account 1 have been created with owner: "+ acc1.getOwner() + " and balance: " + acc1.getBalance() + " VND");
+        Bank bank = new Bank("BIDV", 6);
+        System.out.println("Bank " + bank.getBrand() + " have been created.");
 
-        acc1.withdraw(1000000);
-        System.out.println("Owner: "+ acc1.getOwner() + " and balance: " + acc1.getBalance() + " VND");
+        bank.add(acc1);
+        bank.add(acc2);
 
-        acc1.withdraw(30,"USD");
-        System.out.println("Owner: "+ acc1.getOwner() + " and balance: " + acc1.getBalance() + " VND");
+        bank.printAllAccount();
 
-        acc1.withdraw(10,"GBP");
-        System.out.println("Owner: "+ acc1.getOwner() + " and balance: " + acc1.getBalance() + " VND");
+        System.out.println("Total balance: " + bank.calculateTotalBalance());
 
-        if(acc1.withdraw(20, "CDS") == false)
-        {
-            System.out.println("This currency is supported in the Bank");
-        }
+
     }
 }

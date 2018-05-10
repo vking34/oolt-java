@@ -1,4 +1,4 @@
-package ass3;
+package assignment3;
 
 class Account {
     private String owner;

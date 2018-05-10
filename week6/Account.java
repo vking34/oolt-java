@@ -37,14 +37,16 @@ class Account {
         owner = name;
     }
 
-    void credit(double amount)
+    public boolean credit(double amount)
     {
         if(amount < 0)
         {
             System.out.println("Please use the debit method !!!");
+            return false;
         }
         else {
             balance += amount;
+            return true;
         }
     }
 
@@ -67,12 +69,12 @@ class Account {
         balance = amount;
     }
 
-    void checkBalance()
+    public void checkBalance()
     {
         System.out.println(balance);
     }
 
-    void updateBalance()
+    public void updateBalance()
     {
         balance *= (1+interest);
     }

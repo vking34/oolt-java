@@ -1,4 +1,4 @@
-package ass3;
+package assignment3;
 
 public class ass3 {
     public static void main(String[] agrs)
