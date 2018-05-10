@@ -4,12 +4,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class read {
+public class read_write_file {
 
     public static void main(String[] args) {
 
         List<students> list = new ArrayList<students>();
-        // read file
+        // read_write_file file
         try {
             BufferedReader br = new BufferedReader(new FileReader("/root/IdeaProjects/java-programming/src/read_write_file/StudentsInfo.txt"));
 
